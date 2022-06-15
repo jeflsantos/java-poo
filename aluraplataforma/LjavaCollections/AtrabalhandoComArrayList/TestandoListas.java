@@ -44,6 +44,6 @@ public class TestandoListas {
         System.out.println("Ordem Alfabética");
         System.out.println(aulas);
 
-        
+
     }
 }
