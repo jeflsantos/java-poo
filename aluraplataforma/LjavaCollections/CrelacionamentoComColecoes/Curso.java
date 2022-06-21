@@ -1,6 +1,8 @@
 package aluraplataforma.LjavaCollections.CrelacionamentoComColecoes;
 
 import aluraplataforma.LjavaCollections.BlistasDeObjetos.Aula;
+import aluraplataforma.LjavaCollections.DconjuntosSet.Aluno;
+import com.sun.deploy.net.MessageHeader;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,6 +13,8 @@ public class Curso {
     private String nome;
     private String instrutor;
     private List<Aula> aulas = new LinkedList<Aula>();
+
+
 
     public Curso(String nome, String instrutor) {
         this.nome = nome;
@@ -45,4 +49,5 @@ public class Curso {
     public String toString() {
         return "[Curso: " + nome + ", tempo total: " + this.getTempoTotal() + ", " + "aulas: " + this.aulas + "]";
     }
+
 }
