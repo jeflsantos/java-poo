@@ -1,8 +1,7 @@
 package aluraplataforma.LjavaModernoJava8.Dstreams;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 class Curso{
     private String nome;
@@ -35,10 +34,19 @@ public class ExemploCurso {
         cursos.stream().filter(c -> c.getAlunos() >= 100)
                 .map(Curso::getAlunos).forEach(System.out::println);
 
-        int sum = cursos.stream().filter(c -> c.getAlunos() >= 100)
-                .mapToInt(Curso::getAlunos).sum();
+        OptionalDouble media = cursos.stream().filter(c -> c.getAlunos() >= 100)
+                .mapToInt(Curso::getAlunos).average();
 
-        System.out.println(sum);
+        System.out.println(media);
+
+        cursos.stream().filter(c -> c.getAlunos() >= 100).findAny()
+                .ifPresent(c -> System.out.println(c.getNome()));
+
+        cursos = cursos.stream().filter(c -> c.getAlunos() >= 100)
+                .collect(Collectors.toList());
+
+        cursos.stream().forEach(c -> System.out.println(c.getNome()));
+
 
 
 
