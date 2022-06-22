@@ -1,4 +1,4 @@
-package aluraplataforma.LjavaCollections.DconjuntosSet;
+package aluraplataforma.LjavaCollections.Emaps;
 
 import aluraplataforma.LjavaCollections.BlistasDeObjetos.Aula;
 
@@ -11,6 +11,7 @@ public class Curso {
     private Set<Aluno> alunos = new HashSet<>();
     //private Set<Aluno> alunos = new LinkedHashSet<>();
     //private Set<Aluno> alunos = new TreeSet<>();
+    private Map<Integer, Aluno> matriculaParaAluno = new HashMap<>();
 
     public Curso(String nome, String instrutor) {
         this.nome = nome;
@@ -47,7 +48,9 @@ public class Curso {
     }
 
     public void matricula(Aluno aluno){
+
         this.alunos.add(aluno);
+        this.matriculaParaAluno.put(aluno.getNumeroMatricula(), aluno);
     }
 
     public Set<Aluno> getAlunos() {
@@ -58,6 +61,8 @@ public class Curso {
         return this.alunos.contains(aluno);
     }
 
-
+    public Aluno buscaMatriculado(int numero) {
+        return matriculaParaAluno.get(numero);
+    }
 }
 
