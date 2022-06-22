@@ -1,4 +1,4 @@
-package aluraplataforma.LjavaCollections.DconjuntosSet;
+package aluraplataforma.KjavaCollections.DconjuntosSet;
 
 import java.util.Objects;
 

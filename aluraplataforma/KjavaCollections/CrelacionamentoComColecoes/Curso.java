@@ -1,10 +1,7 @@
 package aluraplataforma.KjavaCollections.CrelacionamentoComColecoes;
 
 import aluraplataforma.KjavaCollections.BlistasDeObjetos.Aula;
-import aluraplataforma.KjavaCollections.DconjuntosSet.Aluno;
-import com.sun.deploy.net.MessageHeader;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;

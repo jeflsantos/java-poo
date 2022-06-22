@@ -2,8 +2,6 @@ package aluraplataforma.KjavaCollections.CrelacionamentoComColecoes;
 
 import aluraplataforma.KjavaCollections.BlistasDeObjetos.Aula;
 
-import java.util.List;
-
 public class TestaCurso {
     public static void main(String[] args) {
         Curso javaColecoes = new Curso("Dominando as coleções", "Paulo Silveira");
