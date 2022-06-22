@@ -1,4 +1,4 @@
-package aluraplataforma.LjavaModernoJava8.AdefaultMethods;
+package aluraplataforma.LjavaModernoJava8.Blambdas;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -15,18 +15,24 @@ public class OrdenaStringNovo {
         palavras.add("Editora Casa do codigo");
         palavras.add("Caelum");
 
-        Comparator<String> comparador = new ComparadorPorTamanho1();
-        palavras.sort(comparador);
+//        palavras.sort((s1, s2) -> {
+//            if (s1.length() < s2.length())
+//                return -1;
+//            if (s1.length() > s2.length())
+//                return 1;
+//            return 0;
+//        });
+
+        palavras.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
+
         System.out.println(palavras);
 
         //Classe Anonimas: Usamos quando a implementa interfaces curtas e quando nao vamos reaproveitar o código.
 
-        palavras.forEach(new Consumer<String>() {
-            @Override
-            public void accept(String s) {
-                System.out.println(s);
-            }
-        });
+        Consumer<String> impressor = s -> System.out.println(s);
+        palavras.forEach(impressor);
+
+        //palavras.forEach(s -> System.out.println(s));
 
 
     }
