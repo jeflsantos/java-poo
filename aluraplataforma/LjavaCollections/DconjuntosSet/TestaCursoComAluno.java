@@ -2,6 +2,9 @@ package aluraplataforma.LjavaCollections.DconjuntosSet;
 
 import aluraplataforma.LjavaCollections.BlistasDeObjetos.Aula;
 
+import java.util.Iterator;
+import java.util.Set;
+
 
 public class TestaCursoComAluno {
     public static void main(String[] args) {
@@ -38,6 +41,18 @@ public class TestaCursoComAluno {
         //obrigatoriamente o seguinte é true:
 
         System.out.println(a1.hashCode() == turini.hashCode());
+
+        System.out.println("====================");
+
+
+        System.out.println("Todos alunos matriculados:");
+        Set<Aluno> alunos = javaColecoes.getAlunos();
+        Iterator<Aluno> iterador = alunos.iterator();
+        while (iterador.hasNext()){
+            Aluno proximoAl = iterador.next();
+            System.out.println(proximoAl);
+        }
+
 
     }
 }
